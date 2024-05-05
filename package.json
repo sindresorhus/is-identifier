@@ -1,0 +1,52 @@
+{
+	"name": "is-identifier",
+	"version": "0.0.0",
+	"description": "Check if a string is a valid JavaScript identifier",
+	"license": "MIT",
+	"repository": "sindresorhus/is-identifier",
+	"funding": "https://github.com/sponsors/sindresorhus",
+	"author": {
+		"name": "Sindre Sorhus",
+		"email": "sindresorhus@gmail.com",
+		"url": "https://sindresorhus.com"
+	},
+	"type": "module",
+	"exports": {
+		"types": "./index.d.ts",
+		"default": "./index.js"
+	},
+	"sideEffects": false,
+	"engines": {
+		"node": ">=18"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"index.js",
+		"index.d.ts"
+	],
+	"keywords": [
+		"identifier",
+		"keyword",
+		"word",
+		"check",
+		"test",
+		"reserved",
+		"javascript",
+		"ecmascript",
+		"variable",
+		"function",
+		"property",
+		"is",
+		"valid"
+	],
+	"dependencies": {
+		"identifier-regex": "^1.0.0",
+		"super-regex": "^1.0.0"
+	},
+	"devDependencies": {
+		"ava": "^6.1.2",
+		"xo": "^0.58.0"
+	}
+}
