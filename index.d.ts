@@ -1,5 +1,5 @@
 /**
-Check if a string is a valid [JavaScript identifier](https://developer.mozilla.org/en-US/docs/Glossary/Identifier)
+Check if a string is a valid [JavaScript identifier](https://developer.mozilla.org/en-US/docs/Glossary/Identifier).
 
 @example
 ```
@@ -15,4 +15,4 @@ isIdentifier('await'); // Reserved identifier
 //=> false
 ```
 */
-export default function isIdentifier(value: string): value is string;
+export default function isIdentifier(value: string);
