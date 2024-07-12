@@ -1,6 +1,6 @@
 {
 	"name": "is-identifier",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Check if a string is a valid JavaScript identifier",
 	"license": "MIT",
 	"repository": "sindresorhus/is-identifier",
