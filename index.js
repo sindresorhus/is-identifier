@@ -1,9 +1,7 @@
 import identifierRegex from 'identifier-regex';
 import {isMatch} from 'super-regex';
 
-const regex = identifierRegex();
-
-export default function isIdentifier(value) {
+export default function isIdentifier(value, {checkReserved = true} = {}) {
 	if (typeof value !== 'string') {
 		throw new TypeError(`Expected a string, got \`${typeof value}\`.`);
 	}
@@ -13,5 +11,5 @@ export default function isIdentifier(value) {
 		return false;
 	}
 
-	return isMatch(regex, value, {timeout: 1000});
+	return isMatch(identifierRegex({checkReserved}), value, {timeout: 1000});
 }

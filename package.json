@@ -42,8 +42,8 @@
 		"valid"
 	],
 	"dependencies": {
-		"identifier-regex": "^1.0.0",
-		"super-regex": "^1.0.0"
+		"identifier-regex": "^1.1.0",
+		"super-regex": "^1.1.0"
 	},
 	"devDependencies": {
 		"ava": "^6.1.2",

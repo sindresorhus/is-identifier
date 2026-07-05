@@ -26,3 +26,19 @@ test('invalid', t => {
 		t.false(isIdentifier(invalid), invalid); // eslint-disable-line ava/assertion-arguments
 	}
 });
+
+test('checkReserved: false', t => {
+	for (const valid of validItems) {
+		t.true(isIdentifier(valid, {checkReserved: false}), valid); // eslint-disable-line ava/assertion-arguments
+	}
+
+	// Reserved words are now allowed, syntax is still checked
+	t.true(isIdentifier('true', {checkReserved: false}));
+	t.true(isIdentifier('undefined', {checkReserved: false}));
+	t.true(isIdentifier('for', {checkReserved: false}));
+
+	// Syntax errors are still rejected
+	t.false(isIdentifier('1foo', {checkReserved: false}));
+	t.false(isIdentifier(' foo', {checkReserved: false}));
+	t.false(isIdentifier('foo-bar', {checkReserved: false}));
+});

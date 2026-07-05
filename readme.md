@@ -28,9 +28,29 @@ isIdentifier('await'); // Reserved identifier
 
 ## API
 
-### isIdentifier(value)
+### isIdentifier(value, options?)
 
 Returns a boolean for whether the given value is a valid JavaScript identifier.
+
+#### options
+
+Type: `object`
+
+##### checkReserved
+
+Type: `boolean`\
+Default: `true`
+
+Reject reserved words and global properties like `if`, `await`, and `undefined`.
+
+These are valid identifier syntax but should not be used as variable names, so they are rejected by default. Disable this when you only care about the syntax, such as for property keys (`{if: 1}`) or dot notation (`foo.for`), where they are allowed.
+
+```js
+import isIdentifier from 'is-identifier';
+
+isIdentifier('for', {checkReserved: false});
+//=> true
+```
 
 ## Related
 
